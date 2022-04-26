@@ -3,7 +3,7 @@ import numpy as np
 
 
 def main():
-    grid = np.loadtxt("grid.txt", dtype=int, delimiter=" ")
+    grid = np.loadtxt("associated_files/grid.txt", dtype=int, delimiter=" ")
 
     def find_largest_row_product(grid: np.array, size: int) -> int:
         for row in grid:

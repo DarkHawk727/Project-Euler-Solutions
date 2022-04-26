@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 
 def main():
-    with open("names.txt", "r") as f:
+    with open("associated_files/names.txt", "r") as f:
         names = f.read().replace('"', "").split(",")
 
     names.sort()
