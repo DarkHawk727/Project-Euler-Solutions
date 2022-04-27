@@ -4,24 +4,25 @@ from tqdm import tqdm
 
 
 def main():
-    def calculate_sum_of_divisors(n: int) -> int:
-        """
-        Calculates the sum of the divisors of n.
-        """
-        sum_of_divisors = 1
-        for i in range(2, int(n**0.5) + 1):
+    def sum_of_divisors(n: int) -> int:
+        sum_of_divisors = 0
+        for i in range(1, int(n**0.5) + 1):
             if n % i == 0:
-                sum_of_divisors += i + n // i
+                if n == n / i:
+                    sum_of_divisors += i
+                else:
+                    sum_of_divisors += i + n // i
         return sum_of_divisors
 
-    amicable_numbers = set()
+    amicable_numbers = []
     for a in tqdm(range(1, 10001)):
-        b = calculate_sum_of_divisors(a)
-        if a == calculate_sum_of_divisors(b):
-            print(f"The sum of the divisors of {a} is {b}.")
-            amicable_numbers.add(a)
-            amicable_numbers.add(b)
-    print(sum(amicable_numbers))
+        b = sum_of_divisors(a)
+        if a != b and sum_of_divisors(b) == a:
+            amicable_numbers.append((a, b))
+
+    print(
+        f"The sum of the amicable numbers is: {sum([i[0] for i in amicable_numbers])}."
+    )
 
 
 if __name__ == "__main__":
