@@ -7,6 +7,7 @@ def main():
             return 1
         else:
             return n * factorial(n - 1)
+
     NUM = factorial(100)
     print(sum(int(i) for i in str(NUM)))
 
