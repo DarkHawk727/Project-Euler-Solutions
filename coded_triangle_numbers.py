@@ -27,7 +27,7 @@ def main():
         return value
 
     triangle_words = []
-    with open("./p042_words.txt") as f:
+    with open("associated_files/p042_words.txt") as f:
         words = f.read().replace('"', "").split(",")
     triangle_numbers = generate_triangle_numbers(200)
     for word in tqdm(words):

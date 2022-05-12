@@ -5,6 +5,11 @@ from tqdm import tqdm
 
 def main():
     def sum_of_divisors(n: int) -> int:
+        """
+        Calculates the sum of the divisors of n.
+        params: n - an integer to find the sum of the divisors of
+        returns: the sum of the divisors of n
+        """
         sum_of_divisors = 0
         for i in range(1, int(n ** 0.5) + 1):
             if n % i == 0:
