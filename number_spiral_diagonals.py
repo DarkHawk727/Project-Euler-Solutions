@@ -5,6 +5,7 @@ def main():
     def calculate_sum(n: int) -> int:
         """
         Calculates the sum of the diagonals of a nxn spiral.
+        params: n - an integer to find the sum of the diagonals of a nxn spiral
         Formula was found on:
         https://www.educative.io/edpresso/how-to-solve-the-number-spiral-diagonals-problem
         """

@@ -6,6 +6,8 @@ def main():
     def calculate_fibonacci_number(n: int) -> int:
         """
         Calculates the nth Fibonacci number.
+        params: n - an integer to find the nth Fibonacci number
+        returns: the nth Fibonacci number
         """
         a, b = 0, 1
         while n > 1:

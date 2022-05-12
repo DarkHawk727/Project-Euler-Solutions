@@ -6,6 +6,9 @@ def main():
     def calculate_combinations(n: int, r: int) -> int:
         """
         Calculates the number of combinations of n choose r.
+        params: n - an integer to choose from
+                r - an integer to choose r
+        returns: the number of combinations of n choose r
         """
         return factorial(n) // (factorial(r) * factorial(n - r))
 

@@ -6,12 +6,16 @@ def main():
     def generate_triangular_number(n: int) -> int:
         """
         Generates the nth triangular number.
+        params: n - an integer to find the nth triangular number
+        returns: the nth triangular number
         """
         return n * (n + 1) // 2
 
     def calculate_number_of_divisors(n: int) -> int:
         """
         Calculates the number of divisors of n.
+        params: n - an integer to find the number of divisors of
+        returns: the number of divisors of n
         """
         divisors = 0
         for i in range(1, int(n ** 0.5 + 1)):

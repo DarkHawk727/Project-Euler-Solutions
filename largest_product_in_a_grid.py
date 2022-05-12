@@ -3,11 +3,16 @@ import numpy as np
 
 
 def main():
-    grid = np.loadtxt("associated_files/grid.txt", dtype=int, delimiter=" ")
+    grid = np.loadtxt("associated_files/p011_grid.txt", dtype=int, delimiter=" ")
 
     def find_largest_row_product(grid: np.array, size: int) -> int:
+        """
+        Returns the largest product of size consecutive numbers in a row.
+        params: grid - a 2d array of integers
+                size - an integer to find the largest product of
+        returns: the largest product of size consecutive numbers in a row
+        """
         for row in grid:
-            # CFind the largest product of 4 adjacent numbers in the same row
             largest_product_row = 1
             for i in range(len(row) - size + 1):
                 product = 1
@@ -17,8 +22,13 @@ def main():
             return largest_product_row
 
     def find_largest_column_product(grid: np.array, size: int) -> int:
+        """
+        Returns the largest product of size consecutive numbers in a column.
+        params: grid - a 2d array of integers
+                size - an integer to find the largest product of
+        returns: the largest product of size consecutive numbers in a column
+        """
         for i in range(len(grid)):
-            # Find the largest product of 4 adjacent numbers in the same column
             largest_product_column = 1
             for j in range(len(grid[i]) - size + 1):
                 product = 1
@@ -28,7 +38,12 @@ def main():
             return largest_product_column
 
     def find_largest_diagonal_product(grid: np.array, size: int) -> int:
-        # Find the largest product of 4 adjacent numbers in the same diagonal
+        """
+        Returns the largest product of size consecutive numbers in a diagonal.
+        params: grid - a 2d array of integers
+                size - an integer to find the largest product of
+        returns: the largest product of size consecutive numbers in a diagonal
+        """
         largest_product_diagonal = 1
         for i in range(len(grid) - size + 1):
             for j in range(len(grid[i]) - size + 1):
@@ -39,7 +54,12 @@ def main():
         return largest_product_diagonal
 
     def find_largest_anti_diagonal_product(grid: np.array, size: int) -> int:
-        # Find the largest product of 4 adjacent numbers in the same anti-diagonal
+        """
+        Returns the largest product of size consecutive numbers in an anti-diagonal.
+        params: grid - a 2d array of integers
+                size - an integer to find the largest product of
+        returns: the largest product of size consecutive numbers in an anti-diagonal
+        """
         largest_product_anti_diagonal = 1
         for i in range(len(grid) - size + 1):
             for j in range(len(grid[i]) - size + 1):

@@ -40,6 +40,11 @@ def main():
     ]
 
     def convert_num_to_word(num: int) -> str:
+        """
+        Converts a number to a word.
+        params: num - an integer to convert to a word
+        returns: the word representation of the number
+        """
         if 1 <= num <= 9:
             return digits[num - 1]
         elif 10 <= num <= 19:

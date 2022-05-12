@@ -4,6 +4,11 @@ from math import sqrt
 
 def main():
     def generate_fibonacci_numbers(n: int) -> list:
+        """
+        Returns a list of fibonacci numbers up to n.
+        params: n - an integer to find fibonacci numbers up to
+        returns: a list of fibonacci numbers up to n
+        """
         fibonacci_numbers = [1, 1]
         for i in range(2, n):
             fibonacci_numbers.append(

@@ -4,6 +4,11 @@ from tqdm import tqdm
 
 def main():
     def calculate_collatz_sequence_length(n: int) -> int:
+        """
+        Calculates the length of the Collatz sequence starting with n.
+        params: n - an integer to find the length of the Collatz sequence starting with
+        returns: the length of the Collatz sequence starting with n
+        """
         sequence_length = 0
         while True:
             if n == 1:

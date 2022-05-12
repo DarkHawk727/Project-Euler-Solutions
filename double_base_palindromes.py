@@ -5,6 +5,11 @@ from tqdm import tqdm
 
 def main():
     def is_palindrome(n: int) -> bool:
+        """
+        Checks if n is a palindrome.
+        params: n - an integer to check if it is a palindrome
+        returns: True if n is a palindrome, False otherwise
+        """
         return str(n) == str(n)[::-1]
 
     answer = 0

@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 
 def main():
-    with open("associated_files/triangle.txt", "r") as f:
+    with open("associated_files/p067_triangle.txt", "r") as f:
         pyramid = [[int(x) for x in line.split()] for line in f.read().split("\n")]
 
     for i in tqdm(range(len(pyramid) - 2, -1, -1)):
