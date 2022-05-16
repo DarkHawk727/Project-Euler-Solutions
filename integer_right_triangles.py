@@ -16,8 +16,6 @@ def main():
                         else:
                             perimeters[a + b + c] = [(a, b, c)]
 
-    for key, value in sorted(perimeters.items()):
-        print(f"{key}: {value}")
     max_perimeter = max(perimeters.keys())
     num_solutions = len(perimeters[max_perimeter])
     print(
