@@ -1,5 +1,7 @@
 # Arjun Sarao
 
+from tqdm import tqdm
+
 
 def main():
     def convert_to_decimal(numerator: int, denominator: int) -> str:
@@ -32,7 +34,7 @@ def main():
 
     fractions = {}
 
-    for denominator in range(1, 1001):
+    for denominator in tqdm(range(1, 1001)):
         expansion = convert_to_decimal(1, denominator)
         fractions["1/" + str(denominator)] = [expansion, len(expansion) - 2]
 
